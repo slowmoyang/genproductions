@@ -225,6 +225,7 @@ make_gridpack () {
     #   echo "set ninja $PWD/HEPTools/lib" >> mgconfigscript
 
       if [ "$queue" == "local" ]; then
+	      echo "set nb_core $NB_CORE" >> mgconfigscript
           echo "set run_mode 2" >> mgconfigscript
       elif [ "$queue" == "pdmv" ]; then
           echo "set run_mode 2" >> mgconfigscript
